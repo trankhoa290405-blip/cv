@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tran Nguyen Dang Khoa — CV</title>
+<style>
+  :root{
+    --navy:#1B2A4A;
+    --navy-dark:#10182E;
+    --navy-photo:#2A3B63;
+    --accent:#3B82C4;
+    --gold:#C9A961;
+    --white:#FFFFFF;
+    --text-dark:#222222;
+    --text-grey:#555555;
+    --sidebar-text:#E7ECF5;
+    --sidebar-muted:#AFC0DA;
+  }
+
+  *{ box-sizing:border-box; }
+
+  body{
+    margin:0;
+    font-family:"Calibri","Segoe UI",Arial,sans-serif;
+    background:#e9ebef;
+    color:var(--text-dark);
+  }
+
+  .cv-page{
+    max-width:850px;
+    margin:24px auto;
+    background:var(--white);
+    display:flex;
+    box-shadow:0 4px 24px rgba(0,0,0,0.12);
+    min-height:1100px;
+  }
+
+  /* ---------- Sidebar ---------- */
+  .sidebar{
+    background:var(--navy);
+    color:var(--sidebar-text);
+    width:34%;
+    padding:28px 22px;
+  }
+
+  .photo-box{
+    width:100%;
+    aspect-ratio:1/1;
+    max-width:190px;
+    margin:0 auto 24px auto;
+    background:var(--navy-photo);
+    border:2px dashed var(--sidebar-muted);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+  }
+  .photo-box strong{
+    font-size:13px;
+    letter-spacing:1px;
+    color:var(--sidebar-muted);
+  }
+  .photo-box span{
+    font-size:11px;
+    font-style:italic;
+    color:var(--sidebar-muted);
+    margin-top:4px;
+  }
+
+  .name-block h1{
+    font-size:22px;
+    line-height:1.25;
+    margin:0 0 10px 0;
+    color:var(--white);
+  }
+  .role-title{
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:1.5px;
+    color:var(--gold);
+    margin-bottom:22px;
+  }
+
+  .side-h{
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:1.5px;
+    color:var(--gold);
+    text-transform:uppercase;
+    border-bottom:1px solid var(--gold);
+    padding-bottom:6px;
+    margin:20px 0 10px 0;
+  }
+  .side-h:first-of-type{ margin-top:0; }
+
+  .side-line{
+    font-size:12.5px;
+    margin:0 0 6px 0;
+    color:var(--sidebar-text);
+  }
+
+  .skill-line{
+    font-size:12px;
+    margin:0 0 8px 0;
+    color:var(--sidebar-muted);
+  }
+  .skill-line b{ color:var(--white); }
+
+  .side-bullets{
+    list-style:none;
+    margin:0;
+    padding:0;
+    font-size:12px;
+  }
+  .side-bullets li{
+    position:relative;
+    padding-left:14px;
+    margin-bottom:8px;
+    color:var(--sidebar-text);
+  }
+  .side-bullets li::before{
+    content:"▪";
+    position:absolute;
+    left:0;
+    color:var(--accent);
+    font-size:10px;
+  }
+
+  /* ---------- Main content ---------- */
+  .main{
+    width:66%;
+    padding:30px 30px 30px 34px;
+  }
+
+  .section-title{
+    font-size:16px;
+    font-weight:bold;
+    letter-spacing:1px;
+    color:var(--navy);
+    text-transform:uppercase;
+    border-bottom:2px solid var(--navy);
+    padding-bottom:8px;
+    margin:24px 0 12px 0;
+  }
+  .section-title:first-child{ margin-top:0; }
+
+  .body-p{
+    font-size:13.5px;
+    line-height:1.5;
+    color:var(--text-dark);
+    margin:0 0 10px 0;
+  }
+
+  .project-title{
+    font-size:14.5px;
+    font-weight:bold;
+    color:var(--navy-dark);
+    margin:16px 0 2px 0;
+  }
+  .project-sub{
+    font-size:12px;
+    font-style:italic;
+    color:var(--accent);
+    margin:0 0 8px 0;
+  }
+
+  .project-bullets{
+    list-style:disc;
+    margin:0 0 6px 0;
+    padding-left:18px;
+  }
+  .project-bullets li{
+    font-size:13px;
+    line-height:1.5;
+    color:var(--text-dark);
+    margin-bottom:6px;
+  }
+  .project-bullets li::marker{ color:var(--accent); }
+
+  .tech-line{
+    font-size:12px;
+    color:var(--text-grey);
+    margin:4px 0 0 0;
+  }
+  .tech-line b{ font-weight:bold; }
+  .tech-line em{ font-style:italic; }
+
+  .edu-school{
+    font-size:14.5px;
+    font-weight:bold;
+    color:var(--navy-dark);
+    margin:0 0 2px 0;
+  }
+  .edu-meta{
+    font-size:12.5px;
+    font-style:italic;
+    color:var(--accent);
+    margin:0 0 8px 0;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:640px){
+    .cv-page{ flex-direction:column; }
+    .sidebar, .main{ width:100%; }
+  }
+
+  @media print{
+    body{ background:var(--white); }
+    .cv-page{ box-shadow:none; margin:0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cv-page">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="photo-box">
+      <strong><img src="/img/1786414974553_200253416915875237_1386401954033917535_7f05fc8aef3f3fd69aa4e0f10c201544.jpg" alt=""></strong>
+      <span></span>
+    </div>
+
+    <div class="name-block">
+      <h1>TRAN NGUYEN<br>DANG KHOA</h1>
+    </div>
+    <div class="role-title">SOFTWARE / BACKEND ENGINEER</div>
+
+    <div class="side-h">Contact</div>
+    <p class="side-line">📍 Ho Chi Minh City, Vietnam</p>
+    <p class="side-line">📞 [Phone number]</p>
+    <p class="side-line">✉️ [Email]</p>
+    <p class="side-line">🔗 GitHub: [GitHub URL]</p>
+    <p class="side-line">🔗 LinkedIn: [LinkedIn URL]</p>
+
+    <div class="side-h">Technical Skills</div>
+    <p class="skill-line"><b>Languages:</b> C#, Python, JavaScript, SQL</p>
+    <p class="skill-line"><b>Backend:</b> FastAPI, REST API</p>
+    <p class="skill-line"><b>Database:</b> PostgreSQL</p>
+    <p class="skill-line"><b>Data Pipeline:</b> Apache Airflow, CeleryExecutor</p>
+    <p class="skill-line"><b>Monitoring:</b> Grafana, Prometheus</p>
+    <p class="skill-line"><b>DevOps:</b> Docker, Docker Compose, Redis</p>
+    <p class="skill-line"><b>Testing:</b> Pytest, Playwright</p>
+    <p class="skill-line"><b>OCR:</b> PaddleOCR, Tesseract, Sharp</p>
+    <p class="skill-line"><b>Tools:</b> Git, GitHub, VS Code, PowerShell</p>
+
+    <div class="side-h">Key Strengths</div>
+    <ul class="side-bullets">
+      <li>Backend development, database integration</li>
+      <li>Multi-layer debugging: code, network, Docker, Airflow</li>
+      <li>Integrating stacks into end-to-end systems</li>
+    </ul>
+
+    <div class="side-h">Languages</div>
+    <p class="side-line">Vietnamese: Native</p>
+    <p class="side-line">English: [Basic / Intermediate / Advanced]</p>
+
+    <div class="side-h">Certifications</div>
+    <p class="side-line">[Certificate name] — [Organization] — [Year]</p>
+    <p class="side-line">[Certificate name] — [Organization] — [Year]</p>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="main">
+
+    <div class="section-title">Professional Summary</div>
+    <p class="body-p">Backend Developer with hands-on experience building backend services, designing databases, and deploying systems with Docker. Directly developed and debugged systems across the full stack: REST API, PostgreSQL, Airflow, Grafana/Prometheus, and OCR pipelines.</p>
+    <p class="body-p">Aiming to grow as a Backend Engineer, focused on building stable backend systems, API design, data processing, and system integration.</p>
+
+    <div class="section-title">Project Experience</div>
+
+    <div class="project-title">1. IoT Monitoring &amp; Data Pipeline</div>
+    <div class="project-sub">Airflow · PostgreSQL · Grafana · Prometheus · Docker</div>
+    <ul class="project-bullets">
+      <li>Deployed a containerized IoT monitoring system: Data Source → Airflow → PostgreSQL → Grafana.</li>
+      <li>Built Airflow DAGs, connected PostgreSQL, designed data tables, and handled duplicate-record checks.</li>
+      <li>Set up Grafana/Prometheus dashboards; debugged authentication, Docker networking, and Airflow Scheduler/Worker issues via container logs.</li>
+    </ul>
+    <p class="tech-line"><b>Tech stack:</b> <em>Python, Apache Airflow 3.3, PostgreSQL 16, Grafana, Prometheus, Docker Compose, Redis, FastAPI</em></p>
+
+    <div class="project-title">2. FastAPI Backend Service</div>
+    <div class="project-sub">Python · FastAPI · PostgreSQL · Docker</div>
+    <ul class="project-bullets">
+      <li>Built a backend service with FastAPI, connected to PostgreSQL via psycopg2.</li>
+      <li>Configured via environment variables, integrated with Docker Compose; debugged connection/authentication issues.</li>
+    </ul>
+    <p class="tech-line"><b>Tech stack:</b> <em>Python, FastAPI, PostgreSQL, psycopg2, Docker Compose</em></p>
+
+    <div class="project-title">3. CAPTCHA Automation &amp; OCR Pipeline</div>
+    <div class="project-sub">Playwright · Python · PaddleOCR · Image Processing</div>
+    <ul class="project-bullets">
+      <li>Built a pipeline: Browser Automation → CAPTCHA Capture → Image Preprocessing → OCR, using Playwright + Sharp.</li>
+      <li>Switched from Tesseract to PaddleOCR to improve recognition accuracy; wrote pipeline tests with Pytest.</li>
+    </ul>
+    <p class="tech-line"><b>Tech stack:</b> <em>Python, Playwright, PaddleOCR, Tesseract, Sharp, Pytest</em></p>
+
+    <div class="project-title">4. Mail XML Watcher</div>
+    <div class="project-sub">Automation · XML Processing</div>
+    <ul class="project-bullets">
+      <li>Built a system to monitor and process XML data from incoming emails, automating data ingestion into a complete workflow.</li>
+    </ul>
+    <p class="tech-line"><b>Tech stack:</b> <em>Python, XML, Automation</em></p>
+
+    <div class="section-title">Education</div>
+    <p class="edu-school">[School / Institution name]</p>
+    <p class="edu-meta">[Major] · [Start date] – [Expected graduation]</p>
+    <p class="body-p">Relevant coursework: Programming, Object-Oriented Programming, Database Systems, Web Development, Data Structures &amp; Algorithms, Software Engineering, Computer Networks.</p>
+
+    <div class="section-title">Career Objective</div>
+    <p class="body-p">Growing as a Backend Engineer: in the short term, building expertise in backend architecture, API development, and database engineering in a hands-on environment; long term, aiming to design end-to-end systems spanning application to infrastructure.</p>
+
+  </main>
+</div>
+
+</body>
+</html>
