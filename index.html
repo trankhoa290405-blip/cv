@@ -44,19 +44,12 @@
     padding:28px 22px;
   }
 
-  .photo-box{
-    width:100%;
-    aspect-ratio:1/1;
-    max-width:190px;
-    margin:0 auto 24px auto;
-    background:var(--navy-photo);
-    border:2px dashed var(--sidebar-muted);
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-  }
+  .photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
   .photo-box strong{
     font-size:13px;
     letter-spacing:1px;
@@ -219,9 +212,11 @@
   <!-- ============ SIDEBAR ============ -->
   <aside class="sidebar">
     <div class="photo-box">
-      <strong><img src="/img/1786414974553_200253416915875237_1386401954033917535_7f05fc8aef3f3fd69aa4e0f10c201544.jpg" alt=""></strong>
-      <span></span>
-    </div>
+    <img
+        src="img/1786414974553_200253416915875237_1386401954033917535_7f05fc8aef3f3fd69aa4e0f10c201544.jpg"
+        alt="Ảnh đại diện"
+    >
+</div>
 
     <div class="name-block">
       <h1>TRAN NGUYEN<br>DANG KHOA</h1>
